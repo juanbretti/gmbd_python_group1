@@ -1,0 +1,47 @@
+https://campus.ie.edu/webapps/blackboard/content/listContent.jsp?course_id=_114341620_1&content_id=_2538576_1&mode=reset
+
+1:10 PM 7/25/2020
+
+
+Group Work - CLEANING DATA and DEVELOPING 2 MODELS using the RBA_KYC_Accounts
+Attached Files:
+File GroupVideo_StarterCode_v1.zip (41.518 MB)
+File RBA Metadata Template.MHK.060319-Updated.xlsx (11.67 KB)
+File RBA Metadata.xlsx (51.379 KB)
+Your group task is to record a video of 10 - 15 minutes delivering a "lecture" of CLEANING DATA and DEVELOPING 2 MODELS using the RBA_KYC_Accounts_ALL_Ids.xlsx dataset in Python.
+
+You should use Pandas, Matplotlib and Scikit Learn (Sklearn) libraries only.
+
+Your video should include:
+
+A quick explanation of Pandas, Matplotlib and Sklearn, specially including their histories. (less than a minute)
+A quick Exploratory Data Analysis of the data set used.
+Using the EDA, explain the problems of data quality in this data set.
+Research about data preparation with Python. Propose and implement ways to clean, input missing and prepare the data for modelling. (YOUR VIDEO SHOULD FOCUS IN THIS PART - 70-80% OF THE VIDEO SHOULD BE ABOUT DATA CLEANING AND DATA PREPARATION)
+Then, develop one Regression model using rbaValue as target variable.  Remember to assess the model performance using an appropriate measure for regression. 
+Then, develop one binary Classification model using Risk_Description setting Risk_Description = Low as 0 and else 1 (Medium or High). Remember to assess your model performance using a appropriate measure for classification.
+ps. please, don't improve the model, you don't need to make good one, simply do a quick one! This exercise is about explaining, in a video lecture, how to prepare the data for modelling , not about making a good model .
+DEADLINE: until the 15th of September 2020 without penalty and then the following penalties:
+16th/September: -1.0 (grade received times 0.9)
+17th/September: -2.0  (grade received times 0.8)
+18th/September onwards: -10.0 (grade will be zero)
+
+It is not mandatory to any of you to appear in the video or even your own voices to be recorded, but recording voices make the video much nicer to watch. Be aware that this video may late be used on future courses.
+
+As a reference, here are couple of the best videos from past students (note that they had different data sets and they were not focused on data cleaning and data preparation!):
+
+2018 MBD01 Group E Variable Transformation - https://www.youtube.com/watch?v=j_0HQ2UF_L0
+2019 - Risk & Fraud Analytics - Scikit Learn & Lending Club - Group C - https://www.youtube.com/watch?v=oTmHMXsksM8
+Some video tools previous students have used in no specific order (don´t limit yourself to this list):
+
+    Videoscribe - https://www.videoscribe.co/
+    Screen-o-matic - https://screencast-o-matic.com/
+    Moovly - https://www.moovly.com/
+    Coanimate - http://www.co-animate.com/
+    Biteable - https://biteable.com/
+    PoowToon - https://www.powtoon.com/
+    Create a PPT and then convert it into video: https://www.ispringsolutions.com/ispring-converter
+    Use your own camera/mobile phone.
+
+DELIVERABLES: a zip file delivered in here (just one for the whole group)!
+The zip file should include the video or a link to the video using DropBox, Google Drive or any other file transfer service [OR a link to the video on Youtube], all Notebooks (Python code used in the video) and all datasets used in the making of the video ;-)
