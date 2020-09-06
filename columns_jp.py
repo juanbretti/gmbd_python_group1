@@ -59,4 +59,53 @@ profile.to_file("storage/df_report_before_jp.html")
 
 #%%
 df['score_card_Desc'].value_counts()
+
 # %%
+# Remove highly correlated columns
+
+# https://stackoverflow.com/a/60882164/3780957
+corr = df.corr()
+
+kot = corr[corr>=.9]
+plt.figure(figsize=(30,10))
+sns.heatmap(kot, cmap="Greens")
+#%%
+# https://stackoverflow.com/a/63536382/3780957
+
+def corrFilter(x: pd.DataFrame, bound: float):
+    xCorr = x.corr()
+    xFiltered = xCorr[((xCorr >= bound) | (xCorr <= -bound)) & (xCorr !=1.000)]
+    xFlattened = xFiltered.unstack().sort_values().drop_duplicates()
+    return xFlattened
+
+cor_ = corrFilter(df, .8)
+cor_
+#%%
+# https://stackoverflow.com/a/25733562/3780957
+df.drop(cor_.reset_index()['level_1'], axis=1, inplace=True)
+
+
+#%% [mark down]
+#Imputation
+
+#%%
+## Mode fills for missing values
+cat_columns = df.select_dtypes(include=['object', 'datetime64']).columns
+cat_feats = df.loc[:, cat_columns]
+
+for var in cat_columns:
+    if sum(1*cat_feats[var].isnull()):
+        print(var, 'has missings')
+        mode_ = cat_feats[var].mode().iloc[0]
+        cat_feats.loc[cat_feats[var].isnull(), var] = mode_
+        cat_feats[var+'_missing'] = 1*cat_feats[var].isna()
+
+#%%    
+num_columns = df.select_dtypes(include=['int64', 'float64']).columns
+num_feats = df.loc[:, num_columns]
+
+for var in num_columns:
+    if sum(1*num_feats[var].isnull()):
+        print(var, 'has missings')
+        num_feats.loc[num_feats[var].isnull(), var] = 0
+        num_feats[var+'_missing'] = 1*num_feats[var].isnull()
