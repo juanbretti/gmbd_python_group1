@@ -52,10 +52,10 @@ print('Bretti')
 print(df.columns[36:])
 
 #%%
-df2 = df.iloc[:, 36:]
+df2 = df.iloc[:, 18:27]
 
 profile = ProfileReport(df2, title="RBA_KYC_Accounts >> Before >> JP", minimal=False)
-profile.to_file("storage/df_report_before_jp.html")
+profile.to_file("storage/df_report_before_esperanza.html")
 
 #%%
 df['score_card_Desc'].value_counts()
